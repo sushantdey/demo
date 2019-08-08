@@ -6,17 +6,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cg.DAO.CustomerDAO;
 import com.cg.DOM.Customer;
+import com.cg.exceptions.UserNameAlreadyExistsException;
 
 public class CustomerServicesImpl implements CustomerServices {
 	@Autowired
 	CustomerDAO customerDAO;
+	@Autowired
+	Customer customer;
 	@Override
-	public String registerCustomer(Customer customer) {
+	public String checkUserNameAvailability(String userName) throws UserNameAlreadyExistsException {
 		CustomerServices customerServices = new CustomerServicesImpl();
-		if(customerServices.findCustomerByUserName(customer.getUserName())!=null)
-			return "UserName already exists. Please try again with different username.";
-		customerDAO.save(customer);
-		return "Registration successful. Login to continue.";
+		if(customerServices.findCustomerByUserName(userName)!=null)
+			throw new UserNameAlreadyExistsException();
+		else
+			return "Registration successful. Login to continue.";
+	}
+	@Override
+	public Customer registerCustomer(Customer customer) {
+		return customerDAO.save(customer);
 	}
 
 	@Override
@@ -33,5 +40,4 @@ public class CustomerServicesImpl implements CustomerServices {
 	public Customer findCustomerByContactNo(String contactNo) {
 		return customerDAO.findCustomerByContactNo(contactNo);
 	}
-
 }

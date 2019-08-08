@@ -13,6 +13,8 @@ public class Customer {
 	private String userName;
 	private String firstName;
 	private String lastName;
+	private String contactNo;
+	private String emailId;
 	@Embedded
 	private Address address;
 }

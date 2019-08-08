@@ -1,6 +1,5 @@
 package com.cg.DOM;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 import lombok.Data;
@@ -14,7 +13,4 @@ public class Address {
 	private String city;
 	private String state;
 	private int pincode;
-	@Column(unique = true, nullable = false)
-	private String contactNo;
-	private String emailId;
 }
