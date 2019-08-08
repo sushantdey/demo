@@ -13,13 +13,14 @@ public class CustomerServicesImpl implements CustomerServices {
 	CustomerDAO customerDAO;
 	@Autowired
 	Customer customer;
+	@Autowired
+	CustomerServices customerServices;
 	@Override
 	public String checkUserNameAvailability(String userName) throws UserNameAlreadyExistsException {
-		CustomerServices customerServices = new CustomerServicesImpl();
 		if(customerServices.findCustomerByUserName(userName)!=null)
 			throw new UserNameAlreadyExistsException();
 		else
-			return "Registration successful. Login to continue.";
+			return "UserName available. Continue to register.";
 	}
 	@Override
 	public Customer registerCustomer(Customer customer) {
