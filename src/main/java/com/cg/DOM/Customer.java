@@ -4,6 +4,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import lombok.Data;
 
 @Entity

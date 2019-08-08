@@ -24,6 +24,6 @@ public class DemoController {
 	}
 	@PostMapping("/register")
 	public Customer registerCustomer(@RequestBody Customer customer) {
-		return customer;
+		return customerServices.registerCustomer(customer);
 	}
 }

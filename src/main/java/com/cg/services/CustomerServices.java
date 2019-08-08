@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import com.cg.DOM.Customer;
 import com.cg.exceptions.UserNameAlreadyExistsException;
 
-@Service
-@Qualifier("customerServices")
 public interface CustomerServices {
 	public String checkUserNameAvailability(String userName) throws UserNameAlreadyExistsException;
 	public Customer registerCustomer(Customer customer);
