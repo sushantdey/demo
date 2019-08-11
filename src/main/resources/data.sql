@@ -1,0 +1,2 @@
+INSERT into customer (user_name, first_name, last_name, contact_no, email_id, house_no, street_no, locality, city, state, pincode)
+		VALUES('sushant', 'Sushant', 'Dey', '7004308409', 'sushant.dey@gmail.com', '228', '4', 'Hata', 'Jsr', 'Jharkhand', '831002');

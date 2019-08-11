@@ -10,7 +10,6 @@ public class CustomResponse {
 	private String responseMessage;
 	public CustomResponse() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public CustomResponse(String responseMessage) {
 		super();
