@@ -1,4 +1,4 @@
-package com.cg.demo;
+package com.cg.services;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.cg.DAO.CustomerDAO;
 import com.cg.DOM.Address;
 import com.cg.DOM.Customer;
+import com.cg.demo.DemoApplication;
 import com.cg.exceptions.UserNameAlreadyExistsException;
 import com.cg.services.CustomerServices;
 

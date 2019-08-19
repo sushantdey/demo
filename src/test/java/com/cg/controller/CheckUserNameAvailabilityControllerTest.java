@@ -1,4 +1,4 @@
-package com.cg.demo;
+package com.cg.controller;
 
 import static org.junit.Assert.assertEquals;
 
